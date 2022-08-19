@@ -5,6 +5,10 @@ spring:
     username: clouldstudy
     password: clouldstudy
   application:
-    name: server-user
+    name: serverUser
 server:
   port: 8000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka

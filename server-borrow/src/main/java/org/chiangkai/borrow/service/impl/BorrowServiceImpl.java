@@ -38,10 +38,10 @@ public class BorrowServiceImpl implements BorrowService {
             return result;
         }
         // 获取用户 user-server 8000
-        User user = restTemplate.getForObject("http://localhost:8000/user/" + uid, User.class);
+        User user = restTemplate.getForObject("http://SERVERUSER/user/" + uid, User.class);
         result.setUser(user);
         // 获取书籍 book-seervr
-        List<Book> books = borrows.stream().map(i -> restTemplate.getForObject("http://localhost:8100/book/" + i.getBid(), Book.class)).collect(Collectors.toList());
+        List<Book> books = borrows.stream().map(i -> restTemplate.getForObject("http://SERVERBOOK/book/" + i.getBid(), Book.class)).collect(Collectors.toList());
         result.setBooks(books);
         return result;
     }

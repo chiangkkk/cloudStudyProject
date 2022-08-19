@@ -1,4 +1,4 @@
-# 记录springClould导包出现的问题
+### 记录springClould导包出现的问题
 在pom中添加
 ```xml
 <dependency>
@@ -44,7 +44,7 @@ maven管理工具一直报错 找不到artifactId
 这个是maven2.0.9版本后出的属性，import只能在dependencyManagement的中使用，能解决maven单继承问题，import依赖关系实际上并不参与限制依赖关系的传递性。
 
 
-# 记录springClould依赖的问题
+### 记录springClould依赖的问题
 
 子包，eureka-server 的依赖父包一直找不到，需要在父项目中的dependencys外加一层`dependencyManagement`
 
@@ -60,3 +60,20 @@ Maven会沿着父子层级向上寻找拥有dependencyManagement 元素的项目
 **注意事项**
 
 dependencyManagement中定义的只是依赖的声明，并不实现引入，因此子项目需要显式的声明需要用的依赖。
+
+
+### 记录Eureka客户端RestTamplate使用出现的问题
+问题描述： 在使用应用名替换ip:port 出现找不到域名的问题
+
+解决方案：在restTamplate bean 上添加注解
+`@LoadBalanced`
+
+### 记录maven父子包依赖管理问题
+问题描述： 父包通过 &lt;dependancyManager&gt; 子包找不到版本号
+
+解决方案：<del> 在子包的 &lt; dependancys&gt; 外也添加 &lt;dependancyManager&gt; </debl> 没解决
+
+犯蠢了 在父项目的&lt;dependancyManager&gt;中重新有这些包且没版本号，被覆盖了，子项目当然找不
+
+
+

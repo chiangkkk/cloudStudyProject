@@ -5,6 +5,10 @@ spring:
     username: clouldstudy
     password: clouldstudy
   application:
-    name: server-book
+    name: serverBook
 server:
   port: 8100
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka
