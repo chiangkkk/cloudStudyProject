@@ -17,3 +17,14 @@
 > 租借信息获取服务 /borrow/{uid}
 > > 根据用户信息获取租借信息
 > 
+>
+> 
+## eureka 注册中心
+### common 
+> 公共的组件
+> 
+> 
+### eureka-center
+> eureka server
+
+
