@@ -9,6 +9,7 @@
         <module>common</module>
         <module>server-borrow</module>
         <module>eureka-center</module>
+        <module>tester</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
