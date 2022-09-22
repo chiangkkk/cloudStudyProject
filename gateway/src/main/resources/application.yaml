@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: borrow-server
+          uri: lb://serverBorrow
+          predicates:
+            - Path=/borrow/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+server:
+  port: 9999

@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          # 这里填写的是本地仓库地址，远程仓库直接填写远程仓库地址 http://git...
+#          uri: https://github.com/chiangkkk/codeConfigRepository.git 一直抽风....
+          # 默认分支设定为你自己本地或是远程分支的名称
+          uri: ${user.home}/Documents/CodeProject/codeConfigRepository
+          default-label: master
+  application:
+    name: config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+
+server:
+  port: 4396

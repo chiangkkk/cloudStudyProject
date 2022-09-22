@@ -1,4 +1,14 @@
 spring:
+  cloud:
+    config:
+      # 名称，其实就是文件名称
+      name: borrowServer
+      # 配置服务器的地址
+      uri: http://localhost:4396
+      # 环境
+      profile: dev
+      # 分支
+      label: master
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/clouldstudy
@@ -10,11 +20,12 @@ server:
   port: 8200
 
 eureka:
-
-
   client:
     service-url:
       defaultZone: http://localhost:8888/eureka
 feign:
   circuitbreaker:
     enabled: true
+
+A:
+  B: 'navicat'
