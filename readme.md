@@ -18,13 +18,23 @@
 > > 根据用户信息获取租借信息
 > 
 >
-> 
-## eureka 注册中心
-### common 
-> 公共的组件
-> 
-> 
-### eureka-center
+>
+### common
+>  公共组件
+
+### eureka 注册中心
 > eureka server
+> 
+> 
+
+### gateway
+> 网关
+> 
+### cofig
+> 配置中心
+> 
+
+### test
+> 写的一些测试（ps: 与其他无关）
 
 
