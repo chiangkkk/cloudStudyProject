@@ -8,9 +8,13 @@ spring:
     name: serverBorrow
 server:
   port: 8200
+
 eureka:
 
 
   client:
     service-url:
       defaultZone: http://localhost:8888/eureka
+feign:
+  circuitbreaker:
+    enabled: true

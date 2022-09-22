@@ -13,6 +13,13 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>2.2.10.RELEASE</version>
+        </dependency>
+
+
+        <dependency>
             <artifactId>common</artifactId>
             <groupId>org.chiangkai</groupId>
             <version>0.0.1-SNAPSHOT</version>
